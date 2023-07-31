@@ -1,0 +1,88 @@
+.main{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+}
+
+.logo{
+  width: 5rem;
+}
+
+.content{
+  height: calc(100vh - 5rem);
+  width: 30%;
+  background-color: blue;
+}
+
+.links-cont{
+  height: 100%;
+  width: calc(100% - 5rem);
+  background-color: aqua;
+}
+
+.carousel {
+  width: 70%;
+  height: calc(100vh - 5rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 300%;
+  height: calc(100vh - 5rem); /* Defina a altura dos slides conforme necessário */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Defina a cor de fundo dos slides conforme necessário */
+}
+
+/*aAAAAAAAAAAAAAA*/
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+  width: 100%;
+}
+
+.prev-btn,
+.next-btn {
+  height: 2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  background-color: black; /* Defina a cor dos botões conforme necessário */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.next-btn {
+  right: 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: #0056b3; /* Defina a cor dos botões quando hover conforme necessário */
+}
+
+.active{
+  display: flex;
+}
+
+.disabled{
+  display: none;
+}
+
+.slide-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
