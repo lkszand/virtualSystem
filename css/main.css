@@ -12,6 +12,8 @@
 
 .logo{
   width: 5rem;
+  margin-left: 2.5rem;
+  background-color: green;
 }
 
 .content{
@@ -22,7 +24,7 @@
 
 .links-cont{
   height: 100%;
-  width: calc(100% - 5rem);
+  width: calc(100% - 7.5rem);
   background-color: aqua;
 }
 
@@ -70,7 +72,7 @@
 
 .prev-btn:hover,
 .next-btn:hover {
-  background-color: #0056b3; /* Defina a cor dos botões quando hover conforme necessário */
+  background-color: #1a1a1a;
 }
 
 .active{
@@ -84,5 +86,6 @@
 .slide-img{
   width: 100%;
   height: 100%;
-  object-fit: cover
+  object-fit: cover;
+  object-position: center;
 }
