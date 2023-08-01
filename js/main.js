@@ -4,6 +4,11 @@
 const slides = document.querySelectorAll(".slide");
 let maxSlides = slides.length;
 let counter = 1 //It's a very dangerous variable 'cause it's not being passed as a parameter to other functions therefore the functions are changing it normally anyway. Only god knows what kind of properties and risks I will find if I have to proceed using this variable.
+let slideEl = document.getElementsByClassName("slide");
+
+window.onload = function(){
+  slideEl[0].classList.add("active");
+}
 
 //1.1.1. Slide counter mechanism
 nextSlide = function(maxSlides){
