@@ -56,4 +56,11 @@ prevBtn.addEventListener("click", function(){
 setInterval(() => {
   nextSlide(maxSlides);
   showSlide();
+  console.clear()
 }, 5000);
+
+
+document.body.onmousemove = function(){
+  document.querySelector("audio").muted = false;
+  document.querySelector("audio").play()
+}

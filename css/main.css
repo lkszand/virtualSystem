@@ -1,76 +1,92 @@
-*{
+/* Reset CSS */
+* {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-.main{
+/* Main Container */
+.main {
   display: flex;
   flex-flow: row wrap;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.header{
+/* Principal */
+.principal{
   display: flex;
+  flex-flow: row wrap;
+  height: calc(100vh - 5rem);
+  background-color: black;
+  text-justify: justify;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 5rem;
   background-color: black;
+  font-weight: bolder;
 }
 
-.logo{
+.logo {
   margin-left: 2.5rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0 1rem 0;
 }
 
-.content{
-  height: calc(100vh - 5rem);
-  width: 30%;
-  background-color: black;
-  overflow: auto;
-}
-
-.links-cont{
+.links-cont {
   display: flex;
   height: 100%;
-  width: calc(100% - 7.5rem);
+  margin-right: 2.5rem;
   background-color: black;
 }
 
-.link{
+.link {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   height: 100%;
-  padding: 0 1rem 0 1rem;
+  padding: 0 1rem;
   text-decoration: none;
 }
 
-.link:hover{
+.link:hover {
   background-color: rgb(24, 24, 24);
 }
 
+/* Carousel Styles */
 .carousel {
-  width: 70%;
-  height: calc(100vh - 5rem);
+  width: calc(50% - 6.5rem);
+  height: 100%;
   overflow: hidden;
   position: relative;
+  margin: 0 5rem 0 1.5rem;
 }
-
-.slide {
-  width: 300%;
-  height: calc(100vh - 5rem); /* Defina a altura dos slides conforme necessário */
-  display: none;
-  justify-content: center;
-  align-items: center;
-  background-color: black; /* Defina a cor de fundo dos slides conforme necessário */
-}
-
-/*aAAAAAAAAAAAAAA*/
 
 .slides {
   display: flex;
   transition: transform 0.5s ease;
   overflow: hidden;
   width: 100%;
+}
+
+.slide {
+  width: 300%;
+  height: calc(100vh - 5rem);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 .prev-btn,
@@ -84,9 +100,9 @@
   color: black;
   border: none;
   cursor: pointer;
-  box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 10px 10px 17px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 17px 0px rgba(0, 0, 0, 0.75);
 }
 
 .next-btn {
@@ -98,41 +114,54 @@
   background-color: rgb(190, 190, 190);
 }
 
-.active{
+.active {
   display: flex;
 }
 
-.disabled{
+.disabled {
   display: none;
 }
 
-.slide-img{
-  width: 100%;
-  height: 100%;
-  object-fit: scale-down;
-  object-position: center;
+/* Content Styles */
+.content {
+  flex-flow: row wrap;
+  align-items: flex-start;
+  padding-top: 5rem;
+  width: 50%;
+  background-color: black;
+  overflow: auto;
+  color: white;
 }
 
 @media only screen and (max-width: 1000px) {
-  .content,.carousel{
+  .content,
+  .carousel {
     flex: 100%;
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+/* Content Texts */
+.title-content,.desc-content{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  width: calc(100% - 5rem);
+  margin-left: 5rem;
+  padding-right: 5rem;
+  margin-bottom: 5rem;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #555; /* Color of the thumb (drag handle) */
-  border-radius: 0; /* Rounded corners of the thumb */
+.button{
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background-color: #777; /* Color of the thumb on hover */
-}
-
-.twitter-title{
+/* Twitter Styles */
+.twitter-title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -146,21 +175,22 @@
   color: white;
 }
 
-.twitter-timeline{
+.twitter-timeline {
   position: relative;
   top: -3.625rem;
 }
 
-.twitter-follow-button{
+.twitter-follow-button {
   background-color: black;
 }
 
+/* Font Styles */
 @font-face {
   font-family: bodoni;
   src: url(../fonts/bodoni.ttf);
 }
 
-.twitter-subtitle{
+.twitter-subtitle {
   display: flex;
   justify-content: center;
   width: 100%;
